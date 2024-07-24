@@ -1,0 +1,58 @@
+<view class="container">
+  <view class="bg-fff p-lr30 border-t">
+    <view class="ipt-wrap border-b flex ai-center">
+      <label for="" class="font14">律师姓名</label>
+      <view class="ml40 flex1">张三</view>
+    </view>
+
+    <view class="ipt-wrap border-b flex ai-center">
+      <label for="" class="font14">联系电话</label>
+      <view class="ml40 flex1">138xxxxxxx</view>
+    </view>
+
+    <view class="ipt-wrap border-b flex ai-center">
+      <label for="" class="font14">性别</label>
+      <view class="ml40 flex1">男</view>
+      <image style="width: 45rpx;height: 45rpx;margin: auto;" src="../../../images/default/address_right.png"></image>
+    </view>
+
+    <view class="ipt-wrap border-b flex ai-center">
+      <label for="" class="font14">最新照片</label>
+      <image style="margin: 20rpx 0 20rpx 40rpx;max-width: 200rpx;max-height: 200rpx;border: rgb(184, 177, 177) solid 1rpx;border-radius: 10rpx;" class="ml40 flex1" src="../../../images/default/friend_1.png"></image>
+      <image src="../../../images/default/icon_close.png" style="position: absolute;margin: 15rpx 0 0 310rpx;width: 50rpx;height: 50rpx;"></image>
+    </view>
+
+    <view class="ipt-wrap border-b flex ai-center">
+      <label for="" class="font14">身份证号</label>
+      <view class="ml40 flex1">xxxxxxxxxx</view>
+    </view>
+
+    <view class="ipt-wrap border-b flex ai-center">
+      <label for="" class="font14">职业证号</label>
+      <view class="ml40 flex1">xxxxxxxxxx</view>
+    </view>
+
+    <view class="ipt-wrap border-b flex ai-center">
+      <label for="" class="font14">所在城市</label>
+      <view class="ml40 flex1">毕节市</view>
+      <image style="width: 45rpx;height: 45rpx;margin: auto;" src="../../../images/default/address_right.png"></image>
+    </view>
+
+    <view class="ipt-wrap border-b flex ai-center">
+      <label for="" class="font14">备案日期</label>
+      <view  style="margin: 0 20rpx 0 40rpx;">2024-07-01</view>
+      <image style="width: 45rpx;height: 45rpx;margin: auto;" src="../../../images/default/xia.png"></image>
+      <view style="margin-left: 20rpx;">至</view>
+      <view  style="margin: 0 20rpx 0 40rpx;">2024-07-01</view>
+      <image style="width: 45rpx;height: 45rpx;margin: auto;" src="../../../images/default//xia.png"></image>
+    </view>
+
+    <view class="ipt-wrap border-b flex ai-center">
+      <label for="" class="font14">职业资格证书</label>
+      <image style="margin: 20rpx 0 20rpx 40rpx;max-width: 200rpx;max-height: 200rpx;border: rgb(184, 177, 177) solid 1rpx;border-radius: 10rpx;" class="ml40 flex1" src="../../../images/default/friend_1.png"></image>
+      <image src="../../../images/default/icon_close.png" style="position: absolute;margin: 15rpx 0 0 355rpx;width: 50rpx;height: 50rpx;"></image>
+    </view>
+
+  </view>
+  <button style="background-color:#0081ff; width: 90%;height: 70rpx;line-height: 70rpx;margin-top: 40rpx;color: white;">提交</button>
+</view>

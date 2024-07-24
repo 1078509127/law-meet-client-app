@@ -1,0 +1,4 @@
+<!--projects/house/pages/my/about/index.wxml-->
+<view>
+  <view style="height: 200rpx; background-color: white;margin: 10rpx;border: 1rpx solid rgb(230, 222, 222);border-radius: 10rpx;">关于我们</view>
+</view>

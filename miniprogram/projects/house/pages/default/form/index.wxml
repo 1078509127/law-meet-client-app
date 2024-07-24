@@ -1,0 +1,46 @@
+<view class="container">
+  <view class="bg-fff p-lr30 border-t">
+    <view class="ipt-wrap border-b flex ai-center">
+      <label for="" class="font14">律师姓名</label>
+      <input type="text" class="ml40 flex1" placeholder="请输入姓名" bindinput="getNameValue"></input>
+    </view>
+
+    <view class="ipt-wrap border-b flex ai-center">
+      <label for="" class="font14">联系电话</label>
+      <input type="text" class="ml40 flex1" maxlength="11" placeholder="请输入手机号码" bindinput="getPhoneValue"></input>
+    </view>
+
+    <view class="ipt-wrap border-b flex ai-center">
+      <label for="" class="font14">会见时间</label>
+      <picker mode="date" header-text="选择时间" value="{{date}}" bindchange="bindDateChange">
+        <view style="display: flex;">
+          <view style="line-height:100rpx;margin-left:40rpx;font-weight:300;font-size: 14px;">开始时间
+          </view>
+          <text style="margin-left: 50rpx;">至</text>
+          <view style="line-height:100rpx;margin-left:60rpx;font-weight:300;font-size: 14px;">结束时间</view>
+        </view>
+      </picker>
+    </view>
+
+
+    <view style="min-height:10rpx;line-height: 100rpx;align-items: center;display: flex;">
+      <view class="ipt-wrap border-b flex ai-center">
+        <label for="" class="font14" style="min-width: 120rpx;">会见地点</label>
+        <input type="text" class="ml40 flex1" maxlength="11" placeholder="请输入详细地址" bindinput="getPhoneValue"></input>
+      </view>
+    </view>
+
+    <view class="ipt-wrap border-b"></view>
+
+    <view class="">
+      <view class="ipt-wrap border-b flex ai-center">
+        <label style="min-height:100rpx;line-height: 100rpx;align-items: center;display: flex;min-width: 120rpx;" class="font14">说明</label>
+        <input type="text" class="ml40 flex1" maxlength="11" placeholder="请在此处填写说明" bindinput="getPhoneValue"></input>
+      </view>
+
+    </view>
+    <view class="ipt-wrap border-b flex ai-center" style="border-bottom: 1rpx solid rgb(230, 222, 222);"> </view>
+  </view>
+
+  <button style="background-color:#0081ff; width: 90%;height: 70rpx;line-height: 70rpx;margin-top: 50rpx;color: white;">提交</button>
+</view>

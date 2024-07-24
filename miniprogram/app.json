@@ -1,0 +1,54 @@
+{
+	"pages": [
+		"projects/house/pages/default/index/default_index",
+    "projects/house/pages/default/form/index",
+    "projects/house/pages/default/search/index",
+    "projects/house/pages/default/auth/index",
+    "projects/house/pages/default/process/index",
+
+    "projects/house/pages/my/index/my_index",
+    "projects/house/pages/my/reserve/index",
+    "projects/house/pages/my/review/index",
+    "projects/house/pages/my/about/index",
+    "projects/house/pages/my/selfHelp/index",
+    "projects/house/pages/my/info/index"
+	],
+	"window": {
+		"backgroundColor": "#f1f1f1",
+		"backgroundTextStyle": "dark",
+		"navigationBarBackgroundColor": "#0061AE",
+		"navigationBarTitleText": "智慧物业小程序",
+		"navigationBarTextStyle": "white"
+	},
+	"tabBar": {
+		"custom": false,
+		"backgroundColor": "#FFFFFF",
+		"color": "#999999",
+		"selectedColor": "#0061AE",
+		"list": [
+			{
+				"pagePath": "projects/house/pages/default/index/default_index",
+				"text": "服务",
+				"iconPath": "/projects/house/images/tabbar/service.png",
+				"selectedIconPath": "/projects/house/images/tabbar/service_cur.png"
+			}, 
+			{
+				"pagePath": "projects/house/pages/my/index/my_index",
+				"text": "我的",
+				"iconPath": "/projects/house/images/tabbar/my.png",
+				"selectedIconPath": "/projects/house/images/tabbar/my_cur.png"
+			}
+		]
+	}, 
+	"permission": {
+		"scope.userLocation": {
+			"desc": "获取你当前位置信息用于小程序位置接口的效果展示"
+		}
+	},
+	"usingComponents": {
+		"cmpt-comm-list": "/cmpts/public/list/comm_list_cmpt",
+		"cmpt-picker": "/cmpts/public/picker/picker_cmpt",
+    "cmpt-modal": "/cmpts/public/modal/modal_cmpt"
+	},
+	"sitemapLocation": "sitemap.json"
+}

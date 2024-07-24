@@ -1,0 +1,16 @@
+<view>
+  <view style="display: flex; background-color: white;">
+    <view wx:for="{{list}}" wx:key="index" style="margin: 20rpx auto;">
+      <image src="{{item.url}}" style="width: 120rpx;height: 120rpx;"></image>
+      <view>{{item.label}}</view>
+    </view>
+  </view>
+
+  <view style="width: 95%;background-color: white;margin: 30rpx auto;border-radius: 10rpx;padding-bottom: 20rpx;">
+    <view style="height: 80rpx;padding: 20rpx 0 0 20rpx;font-size: 18px;font-weight: lighter;border-bottom: rgb(209, 200, 200) solid 1rpx;width: 97%;margin: auto;">常见问题</view>
+    <view wx:for="{{msgList}}" wx:key="index" style="display: flex;height: 80rpx;font-size: 15px;line-height: 80rpx;border-bottom: rgb(209, 200, 200) solid 1rpx;width: 97%;margin: auto;">
+      <view style="margin-left: 20rpx;width: 80%;">{{item.label}}</view>
+      <image src="{{item.url}}" style="width: 45rpx;height: 45rpx;margin: auto;"></image>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,8 @@
+{
+  "usingComponents": {},
+  "backgroundColor": "#f1f1f1",
+  "backgroundTextStyle": "dark",
+  "navigationBarBackgroundColor": "#0061AE",
+  "navigationBarTitleText": "预约申请",
+  "navigationBarTextStyle": "white"
+}
