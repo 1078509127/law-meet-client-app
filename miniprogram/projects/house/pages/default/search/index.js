@@ -16,7 +16,7 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad(options) {
-
+   
 	},
 
 	/**
@@ -30,7 +30,7 @@ Page({
 	 * 生命周期函数--监听页面显示
 	 */
 	onShow() {
-
+    this.Auditresult();
 	},
 
 	/**
@@ -66,5 +66,24 @@ Page({
 	 */
 	onShareAppMessage() {
 
-	}
+  },
+  
+  //审核结果查询 分页
+  Auditresult:function(){
+    debugger
+    wx.request({
+      url: 'http://localhost:8080/client/reserve/reserveInfo', 
+      method:'GET',
+      data: {userID:2},
+        //formData,
+      header: {
+        'Content-type': 'application/json' // 默认值
+       //'content-type': 'application/x-www-form-urlencoded'
+        
+      },
+      success (res) {
+        console.log(res.data)
+      }
+    })
+  }
 })
