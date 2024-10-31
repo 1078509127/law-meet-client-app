@@ -13,4 +13,5 @@ module.exports = {
   AuthReset: WxApiRoot + 'user/reset', //账号手机密码修改
 
   CertAdd: WxApiRoot + 'cert/add', //认证中心添加
+  CretSelect: WxApiRoot + 'cert/select', //认证中心查询
 };

@@ -22,17 +22,18 @@
   <view class="down padding-project">
     <view class="repair card-project shadow-project">
       <view class="item-list">
-        <view class="item" bindtap="url" data-url="/projects/house/pages/my/review/index">
+        <!-- <view class="item" bindtap="redirect" data-url="/projects/house/pages/my/review/index"> -->
+        <view class="item" bindtap="redirect" data-url="/projects/house/pages/my/review/index">
           <image src="../../../images/my/task_1.png" />
           <text>审核中<text wx:if="{{task&&task.status1Cnt}}" class="text-orange margin-left-xxs text-s">({{task.status1Cnt}})</text></text>
         </view>
 
-        <view class="item" bindtap="url" data-url="../../task/my_list/task_my_list?status=0">
+        <view class="item" bindtap="redirect" data-url="../../task/my_list/task_my_list?status=0">
           <image src="../../../images/my/task_0.png" />
           <text>即将会见<text wx:if="{{task&&task.status0Cnt}}" class="text-orange margin-left-xxs text-s">({{task.status0Cnt}})</text></text>
         </view>
 
-        <view class="item" bindtap="url" data-url="../../task/my_list/task_my_list">
+        <view class="item" bindtap="redirect" data-url="../../task/my_list/task_my_list">
           <image src="../../../images/my/task.png" />
           <text>我的会见</text>
         </view>

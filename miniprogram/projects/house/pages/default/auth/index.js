@@ -138,62 +138,37 @@ Page({
       }
     });
   },
-  //上传按钮
-  btn: function () {
-    console.log(this.data.tempFilePaths)
-    for (var i = 0; i < this.data.tempFilePaths.length; i++) {
-      wx.uploadFile({
-        url: api.creSwiper,
-        filePath: this.data.tempFilePaths[i],
-        name: "file",
-        header: {
-          "content-type": "multipart/form-data",
-          'X-Dts-Admin-Token': wx.getStorageSync('X-Dts-Admin-Token')
-        },
-        success: function (res) {
-          if (res.statusCode == 200) {
-            wx.showToast({
-              title: "上传成功",
-              icon: "none",
-              duration: 1500
-            })
-            that.data.imgs.push(JSON.parse(res.data).data)
-            that.setData({
-              imgs: that.data.imgs
-            })
-          }
-        },
-        fail: function (err) {
-          wx.showToast({
-            title: "上传失败",
-            icon: "none",
-            duration: 2000
-          })
-        },
-        complete: function (result) {
-          console.log(result.errMsg)
-        }
-      })
-    }
-  },
   bindChange: function (e) {
     this.setData({
       sex: this.data.sex_list[e.detail.value]
     })
   },
+  //查看个人信息
+  getMyInfo(){
+    var userInfo =  wx.getStorageSync('userInfo');
+    util.request(api.CretSelect, {userId:userInfo.userId}, 'GET').then(res => {
+      if (res.errno == 0) {
+        that.setData({
+          imgs: res.data.items
+        })
+      } else {
+        wx.showModal({
+          title: res.errmsg,
+          icon: 'error',
+          duration: 2000
+        });
+      }
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
-
-  },
+  onLoad(options) {},
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
-  onReady() {
-
-  },
+  onReady() {},
 
   /**
    * 生命周期函数--监听页面显示
