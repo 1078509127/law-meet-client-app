@@ -22,20 +22,20 @@ class TaskBiz extends BaseBiz {
 
 	static async delTask(id, callback) {
 		let cb = async () => {
-			try {
-				let params = {
-					id
-				}
-				let opts = {
-					title: '删除中'
-				}
+			// try {
+			// 	let params = {
+			// 		id
+			// 	}
+			// 	let opts = {
+			// 		title: '删除中'
+			// 	}
 
-				await cloudHelper.callCloudSumbit('task/del', params, opts).then(res => {
-					pageHelper.showSuccToast('删除成功', 1500, callback);
-				});
-			} catch (err) {
-				console.log(err);
-			}
+			// 	await cloudHelper.callCloudSumbit('task/del', params, opts).then(res => {
+			// 		pageHelper.showSuccToast('删除成功', 1500, callback);
+			// 	});
+			// } catch (err) {
+			// 	console.log(err);
+			// }
 		}
 
 		pageHelper.showConfirm('确认删除? 删除不可恢复', cb);

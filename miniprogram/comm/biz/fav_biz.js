@@ -41,14 +41,14 @@ class FavBiz extends BaseBiz {
 		let opts = {
 			title: (isFav == 0) ? '收藏中' : '取消中'
 		}
-		try {
-			let result = await cloudHelper.callCloudSumbit('fav/update', params, opts);
-			that.setData({
-				isFav: result.data.isFav,
-			});
-		} catch (e) {
-			console.log(e);
-		}
+		// try {
+		// 	let result = await cloudHelper.callCloudSumbit('fav/update', params, opts);
+		// 	that.setData({
+		// 		isFav: result.data.isFav,
+		// 	});
+		// } catch (e) {
+		// 	console.log(e);
+		// }
 	}
 
 }

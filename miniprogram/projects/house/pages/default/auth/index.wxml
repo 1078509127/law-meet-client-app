@@ -1,83 +1,83 @@
 <view class="container">
-  <view class="bg-fff p-lr30 border-t">
-    <view class="ipt-wrap border-b flex ai-center">
-      <label for="" class="font14">律师姓名</label>
-      <input type="text" class="ml40 flex1" name="userName" placeholder="请输入姓名" bindinput="getNameValue"></input>
+  <form bindsubmit="formSubmit">
+    <view class="bg-fff p-lr30 border-t">
+      <view class="ipt-wrap border-b flex ai-center">
+        <label for="" class="font14">律师姓名</label>
+        <input type="text" class="ml40 flex1" name="name" placeholder="请输入姓名" value="{{name}}"></input>
+      </view>
 
-    </view>
+      <view class="ipt-wrap border-b flex ai-center">
+        <label for="" class="font14">联系电话</label>
+        <input type="text" class="ml40 flex1" name="phone" maxlength="11" placeholder="请输入手机号码" value="{{phone}}"></input>
+      </view>
 
-    <view class="ipt-wrap border-b flex ai-center">
-      <label for="" class="font14">联系电话</label>
-      <input type="text" class="ml40 flex1" name="phone" maxlength="11" placeholder="请输入手机号码" bindinput="getPhoneValue"></input>
-    </view>
+      <view class="ipt-wrap border-b flex ai-center">
+        <label for="" class="font14">性别</label>
+        <picker class="ml40 flex1" mode="selector" value="{{index}}" range="{{sex_list}}" bindchange='bindChange'>
+        <view>{{sex?sex:'选择性别'}}</view>
+        </picker>
+      </view>
 
-    <view class="ipt-wrap border-b flex ai-center">
-      <label for="" class="font14">性别</label>
-      <picker class="btn" mode="selector" value="{{sex}}"  range="{{sex_list}}" bindchange='bindChange'style="width:30%;height:100rpx;background-color:white">选择性别
-    </picker>
-      
-    </view>
-
-<view class="ipt-wrap border-b flex ai-center">
-<label for="" class="font14">最新照片</label>
-<view class="wrap">
-  <view class="img-wrap">
-    <view class="imglist">
-      <view class="item" wx:for="{{imgs}}" wx:key="item">
-        <image src="{{item.url}}" alt=""></image>
-        <view class='delete' bindtap='deleteImg' data-item="{{item}}">
-          <image src="../../../images/default/closel.png"></image>
+      <view class="ipt-wrap border-b flex ai-center">
+        <label for="" class="font14">最新照片</label>
+        <view class="wrap">
+          <view class="img-wrap">
+            <view class="imglist">
+              <view class="item" wx:if="{{image.length > 0}}">
+                <image src="{{image}}" mode="aspectFit" hidden="{{!image}}"></image>
+                <view class='delete' data-item="{{'最新照片'}}" bindtap='deleteImage'>
+                  <image src="../../../images/default/closel.png"></image>
+                </view>
+              </view>
+              <view class="last-item" wx:if="{{image.length > 0 ? false : true}}" data-item="{{'最新照片'}}" bindtap="chooseImage">
+                <text class="sign">+</text>
+              </view>
+            </view>
+          </view>
         </view>
       </view>
-      <view class="last-item" wx:if="{{imgs.length >= 6 ? false : true}}" bindtap="bindUpload">
-        <text class="sign">+</text>
+
+      <view class="ipt-wrap border-b flex ai-center">
+        <label for="" class="font14">身份证号</label>
+        <input type="text" class="ml40 flex1" name="idCard" maxlength="18" placeholder="请输入身份证号码" value="{{idCard}}"></input>
       </view>
-    </view>
-  </view>
-</view>
-</view>
 
-    <view class="ipt-wrap border-b flex ai-center">
-      <label for="" class="font14">身份证号</label>
-      <input type="text" class="ml40 flex1" name="IDCard" maxlength="18" placeholder="请输入身份证号码" bindinput="getIDCardValue"></input>
-    </view>
+      <view class="ipt-wrap border-b flex ai-center">
+        <label for="" class="font14">职业证号</label>
+        <input type="text" class="ml40 flex1" name="wkCard" maxlength="18" placeholder="请输入身份证号码" value="{{wkCard}}"></input>
+      </view>
 
-    <view class="ipt-wrap border-b flex ai-center">
-      <label for="" class="font14">职业证号</label>
-      <input type="text" class="ml40 flex1" name="Licence" maxlength="18" placeholder="请输入身份证号码" bindinput="getLicenceValue"></input>
-    </view>
+      <view class="ipt-wrap border-b flex ai-center">
+        <label for="" class="font14">所在城市</label>
+        <input type="text" class="ml40 flex1" name="city" maxlength="18" placeholder="请输入城市" value="{{city}}"></input>
+      </view>
 
-    <view class="ipt-wrap border-b flex ai-center">
-      <label for="" class="font14">所在城市</label>
-      <input type="text" class="ml40 flex1" name="Licence" maxlength="18" placeholder="请输入城市" bindinput="getCityValue"></input>
-    </view>
-
-    <view class="ipt-wrap border-b flex ai-center">
-      <label class="font14">备案日期</label>
-      <picker mode="date"  bindchange="bindStartDate">
-        <view class="picker" name="starDate" wx:if="{{starDate==''}}" style="line-height:100rpx;margin-left:40rpx;font-weight:300;font-size: 14px;">备案日期<view class="arrow"></view></view>
-        <view class="picker" name="starDate" wx:else style="line-height:100rpx;margin-left:40rpx;font-weight:300;font-size: 14px;">{{starDate}}<view class="arrow"></view></view>
-      </picker>
-    </view>
-    <view class="ipt-wrap border-b flex ai-center">
-      <label for="" class="font14">职业资格证书</label>
-      <view class="wrap">
-  <view class="img-wrap">
-    <view class="imglist">
-      <view class="item" wx:for="{{imgs}}" wx:key="item">
-        <image src="{{item.url}}" alt=""></image>
-        <view class='delete' bindtap='deleteImg' data-item="{{item}}">
-          <image src="../../../images/default/closel.png"></image>
+      <view class="ipt-wrap border-b flex ai-center">
+        <label class="font14">备案日期</label>
+        <picker mode="date" bindchange="bindStartDate">
+          <view class="picker" name="baDate" value="{{baDate}}" style="line-height:100rpx;margin-left:40rpx;font-weight:300;font-size: 14px;">{{baDate?baDate:'请输入备案日期'}}
+          </view>
+        </picker>
+      </view>
+      <view class="ipt-wrap border-b flex ai-center">
+        <label for="" class="font14">职业资格证书</label>
+        <view class="wrap">
+          <view class="img-wrap">
+            <view class="imglist">
+              <view class="item" wx:if="{{wkImage.length > 0}}">
+                <image src="{{wkImage}}" mode="aspectFit"></image>
+                <view class='delete' data-item="{{'职业资格证书'}}" bindtap='deleteImage'>
+                  <image src="../../../images/default/closel.png"></image>
+                </view>
+              </view>
+              <view class="last-item" wx:if="{{wkImage.length > 0 ? false : true}}" data-item="{{'职业资格证书'}}" bindtap="chooseImage">
+                <text class="sign">+</text>
+              </view>
+            </view>
+          </view>
         </view>
       </view>
-      <view class="last-item" wx:if="{{imgs.length >= 6 ? false : true}}" bindtap="bindUpload">
-        <text class="sign">+</text>
-      </view>
     </view>
-  </view>
-</view>
-</view>
-
-  </view>
-  <button style="background-color:#0081ff; width: 90%;height: 70rpx;line-height: 70rpx;margin-top: 40rpx;color: white;">提交</button>
+    <button style="width: 450rpx;height: 80rpx;line-height: 80rpx; margin: 20rpx auto;background-color: #0081ff;color: white;" formType="submit">提交</button>
+  </form>
 </view>

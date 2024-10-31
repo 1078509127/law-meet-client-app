@@ -6,6 +6,6 @@ Page({
 	behaviors: [behavior],
 
 	onReady: function () { 
-		ProjectBiz.initPage(this);
+		// ProjectBiz.initPage(this);
 	},
 })

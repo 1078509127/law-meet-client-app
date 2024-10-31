@@ -70,7 +70,6 @@ Page({
   
   //审核结果查询 分页
   Auditresult:function(){
-    debugger
     wx.request({
       url: 'http://localhost:8080/client/reserve/reserveInfo', 
       method:'GET',

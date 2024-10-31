@@ -85,7 +85,6 @@ Page({
   },
   //会见开始时间
   bindStart:function(e){
-    debugger
     let thst =  this
     thst.setData({
       start_time:e.detail.value
@@ -93,7 +92,6 @@ Page({
   },
 // 会见结束时间
 bindEnd:function(e){
-  debugger
   let thst =  this
     thst.setData({
       end_time:e.detail.value

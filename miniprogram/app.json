@@ -11,7 +11,10 @@
     "projects/house/pages/my/review/index",
     "projects/house/pages/my/about/index",
     "projects/house/pages/my/selfHelp/index",
-    "projects/house/pages/my/info/index"
+    "projects/house/pages/my/info/index",
+
+    "projects/house/pages/auth/login/login",
+    "projects/house/pages/auth/accountLogin/accountLogin"
 	],
 	"window": {
 		"backgroundColor": "#f1f1f1",

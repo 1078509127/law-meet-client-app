@@ -35,26 +35,26 @@ Page({
 	 * 生命周期函数--监听页面加载
 	 */
 	onLoad: async function (options) {
-		ProjectBiz.initPage(this);
+		// ProjectBiz.initPage(this);
 	},
 
 	_loadList: async function () {
 		let opts = {
 			title: 'bar'
 		}
-		await cloudHelper.callCloudSumbit('home/list', {}, opts).then(res => {
-			let newsList = [];
-			for (let k = 0; k < res.data.length; k++) {
-				if (res.data[k].type == 'news' && res.data[k].cateId == 1)
-					newsList.push(res.data[k]);
-			}
+		// await cloudHelper.callCloudSumbit('home/list', {}, opts).then(res => {
+		// 	let newsList = [];
+		// 	for (let k = 0; k < res.data.length; k++) {
+		// 		if (res.data[k].type == 'news' && res.data[k].cateId == 1)
+		// 			newsList.push(res.data[k]);
+		// 	}
 
-			this.setData({
-				newsList,
-				dataList: res.data
-			});
+		// 	this.setData({
+		// 		newsList,
+		// 		dataList: res.data
+		// 	});
 
-		})
+		// })
 	},
 
 	/**

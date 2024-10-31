@@ -64,20 +64,20 @@ class ActivityBiz extends BaseBiz {
 
 	static async cancelMyActivityJoin(activityJoinId, callback) {
 		let cb = async () => {
-			try {
-				let params = {
-					activityJoinId
-				}
-				let opts = {
-					title: '取消中'
-				}
+			// try {
+			// 	let params = {
+			// 		activityJoinId
+			// 	}
+			// 	let opts = {
+			// 		title: '取消中'
+			// 	}
 
-				await cloudHelper.callCloudSumbit('activity/my_join_cancel', params, opts).then(res => {
-					pageHelper.showSuccToast('已取消', 1500, callback);
-				});
-			} catch (err) {
-				console.log(err);
-			}
+			// 	await cloudHelper.callCloudSumbit('activity/my_join_cancel', params, opts).then(res => {
+			// 		pageHelper.showSuccToast('已取消', 1500, callback);
+			// 	});
+			// } catch (err) {
+			// 	console.log(err);
+			// }
 		}
 
 		pageHelper.showConfirm('确认取消该报名?', cb);

@@ -65,7 +65,7 @@
 	</view>
 </view>
 
-<block wx:if="{{skin.IS_SUB}}">
+<!-- <block wx:if="{{skin.IS_SUB}}">
 	<import src="../../tpls/menu_tpl.wxml" />
 	<template is="menuTpl" data="{{curMenu:'home_index',returnHome:false}}" />
-</block>
+</block> -->
